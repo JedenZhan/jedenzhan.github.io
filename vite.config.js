@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   base: isProduct ? "./" : "/",
   build: {
-    outDir: "dist",
+    outDir: "docs",
   },
   resolve: {
     alias: {
@@ -20,7 +20,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
-        math: "always", 
+        math: "always",
       },
     },
   },

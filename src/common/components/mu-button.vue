@@ -46,7 +46,7 @@ export default {
 
 <style lang="less">
 .mu-button {
-  border-radius: 0.625rem;
+  border-radius: 12px;
   font-size: 1.25rem;
   border: none;
   padding: 0 1rem;

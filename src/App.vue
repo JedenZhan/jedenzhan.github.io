@@ -17,15 +17,22 @@ const editor = ref();
 
 function loadMusicFile(e) {
   const file = e.target.files[0];
-  musicInfo.value = {
-    ...musicInfo.value,
-    file,
-    name: file.name,
-  };
+  const { name } = file;
+  if (name.endsWith(".mp3")) {
+    musicInfo.value = {
+      ...musicInfo.value,
+      file,
+      name: file.name,
+    }; 
+  } else {
+    Notification.error("请选择mp3文件");
+  }
 }
 
 function preview() {
-  Notification.info("试玩将在3s后开始");
+  if (!isPreviewing.value) {
+    Notification.info("试玩将在3s后开始");
+  }
   isPreviewing.value = !isPreviewing.value;
 }
 
@@ -46,14 +53,14 @@ watch(
   <div>
     <div class="flex">
       <div class="form-item">
-        音乐文件: <input type="file" @change="loadMusicFile" />
+        音乐文件: <input type="file" @change="loadMusicFile" accept="*.mp3" />
       </div>
       <a-tooltip content="决定游戏难度(音符密度)">
         <div class="form-item bpm">
           BPM: <input type="number" disabled v-model="musicInfo.bpm" min="80" />
         </div>
       </a-tooltip>
-      <a-tooltip content="几个轨道, 支持3/4">
+      <a-tooltip content="几个轨道, 暂不支持编辑">
         <div class="form-item stacks">
           轨道数量:
           <input
@@ -91,13 +98,12 @@ watch(
   align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
   .form-item {
     &.bpm,
     &.stacks {
       margin-right: 16px;
       input {
-        width: 100px;
+        width: 50px;
       }
     }
   }

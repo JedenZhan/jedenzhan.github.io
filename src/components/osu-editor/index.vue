@@ -193,7 +193,12 @@
         </div>
       </section>
     </div>
-    <div class="text-center mt-16" v-else>Please Select a Music</div>
+    <div class="text-center mt-16" v-else>
+      <p>
+        请选择一个 .mp3 文件
+      </p>
+      <a target="_blank" href="https://qbfao5655g.feishu.cn/docx/BPHpdpjg3oKSzkx9FmmcakstnFd">使用教程</a>
+    </div>
   </div>
 </template>
 
@@ -419,7 +424,6 @@ export default {
       if (!loaded) return;
       this.isPlaying = true;
       if (typeof t === "number") node.currentTime = t;
-      console.dir(node)
       node.play();
       this.setProgress();
     },
