@@ -1,7 +1,6 @@
 <template>
   <div class="osu-editor">
     <div class="flex" v-if="instance.loaded">
-      <!--["needBeatsNum", "stackInfo", 'canUsePrev', 'canBack', 'canPrev']  -->
       <section class="tools relative color-000 font-t8">
         <div v-show="!isPreviewing">
           <h1 class="font-t6">工具</h1>
@@ -197,7 +196,12 @@
       <p>
         请选择一个 .mp3 文件
       </p>
-      <a target="_blank" href="https://qbfao5655g.feishu.cn/docx/BPHpdpjg3oKSzkx9FmmcakstnFd">使用教程</a>
+      <p class="mt-16">
+        <a target="_blank" href="https://qbfao5655g.feishu.cn/docx/BPHpdpjg3oKSzkx9FmmcakstnFd">使用教程</a>
+      </p>
+      <p class="mt-16">
+        <a target="_blank" href="https://osu.ppy.sh/wiki/zh/Client/File_formats/Osu_%28file_format%29">了解什么是OSU</a>
+      </p>
     </div>
   </div>
 </template>
@@ -300,10 +304,6 @@ export default {
       }
     },
     // tools
-    setTimeMode(v) {
-      if (this.selectedTimeMode === v) return;
-      this.$emit("handleChangeMode", v);
-    },
     setPlayRate(v) {
       this.playRate = v;
       this.node.playbackRate = v;
@@ -385,7 +385,6 @@ export default {
       const notesCopy = [...originNotes];
       const originStack = selectedNote[0];
       const nextStack = Number(originStack) + t * step;
-
       const i = notesCopy.findIndex((_) => _ === this.selectedNote);
 
       copy[0] = isDelete

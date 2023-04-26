@@ -73,7 +73,7 @@ watch(
         </div>
       </a-tooltip>
       
-      <div class="form-item">
+      <div class="form-item" v-if="musicInfo.file">
         <button @click="preview">
           {{ !isPreviewing ? "Play" : "Stop Play" }}
         </button>
