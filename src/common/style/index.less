@@ -1,0 +1,167 @@
+@import url(./var.less);
+@import url(./font.less);
+@import url(./reset.less);
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+/* 布局 */
+.flex {
+  display: flex;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.content-end {
+  justify-content: flex-end;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+.col-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.overflow-dot {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.item-shrink {
+  flex-shrink: 0;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.radius-8 {
+  border-radius: 8px;
+}
+
+.radius-4 {
+  border-radius: 4px;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-000 {
+  color: #000 !important;
+}
+
+.fixed {
+  position: fixed;
+}
+
+
+/* 背景 */
+.bg-000 {
+  background-color: var(--color-gray-900);
+}
+
+.bg-fff {
+  background-color: var(--color-gray-200);
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+/* action */
+.pointer {
+  cursor: pointer !important;
+}
+
+.mover {
+  cursor: move;
+}
+
+.row-resizer {
+  cursor: row-resize;
+}
+
+.icon-size {
+  height: 24px;
+}
+
+// 间距
+.mt-4 {
+  margin-top: 4px;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-12 {
+  margin-top: 12px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+  .all-custom {
+    .el-dialog {
+      width: 100%;
+      position: fixed;
+      bottom: -64px;
+      padding: 1rem 1rem 40px;
+    }
+  }
+}
+
+.el-dialog__title {
+  .overflow-dot;
+  max-width: 80%;
+  color: var(--color-gray-900) !important;
+  font-family: segoeuib;
+}
+
+.van-toast {
+  z-index: 9999 !important;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}

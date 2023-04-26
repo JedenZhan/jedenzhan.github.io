@@ -1,0 +1,22 @@
+{
+  "name": "osu-editor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev-force": "vite --force",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.45.2",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "vite": "^4.3.0"
+  }
+}
