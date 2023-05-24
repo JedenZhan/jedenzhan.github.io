@@ -3,12 +3,13 @@ import { ref, watch } from "vue";
 import { Notification } from "@arco-design/web-vue";
 import OsuEditor from "@/components/osu-editor/index.vue";
 
+
 const reload = ref(true);
 const musicInfo = ref({
-  name: "",
+  name: "蜂鸟",
   keys_num: 3,
-  bpm: 80,
-  file: "",
+  bpm: 120,
+  file: 'https://muverse2049.s3.us-west-2.amazonaws.com/test/20221230247364413.mp3',
   osu: "osu file format v14\n\n[General]\nAudioFilename: audio.mp3\nAudioLeadIn: 0\nPreviewTime: 0\nCountdown: 0\nSampleSet: None\nStackLeniency: 0.7\nMode: 3\nLetterboxInBreaks: 0\nWidescreenStoryboard: 0\n\n[Editor]\nDistanceSpacing: 1.22\nBeatDivisor: 4\nGridSize: 4\nTimelineZoom: 1\n\n[Metadata]\nTitle: 20230417380093123_basic_pitch\nTitleUnicode: 20230417380093123_basic_pitch\nArtist: Unknow\nArtistUnicode: Unknow\nCreator: OsuAutoMapper\nVersion: None\nSource: None\nTags: \nBeatmapID: 0\nBeatmapSetID: 0\n\n[Difficulty]\nHPDrainRate: 10.0\nCircleSize: 3.0\nOverallDifficulty: 5.0\nApproachRate: 5.0\nSliderMultiplier: 1.4\nSliderTickRate: 1.0\n\n[Events]\n0,0,bg.png,0,0\n\n[TimingPoints]\n0,300,1,0,0,100,1,0\n\n[Colours]\n\n[HitObjects]\n350,192,661,1,0,0:0:0:0:B6.wav\n",
 });
 

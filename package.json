@@ -7,7 +7,8 @@
     "dev": "vite",
     "dev-force": "vite --force",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pub": "chmod +x ./publish.sh && sh ./publish.sh"
   },
   "dependencies": {
     "vue": "^3.2.47"
